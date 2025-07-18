@@ -23,7 +23,7 @@ function type() {
     if (i < text.length) {
         document.getElementById("typed").innerHTML += text.charAt(i);
         i++;
-        setTimeout(type, 100); // velocidade da digitação
+        setTimeout(type, 120); // velocidade da digitação
     }
 }
 type();
