@@ -15,7 +15,7 @@ body {
 }
 
 a {
-    color: #00ffc3;
+    color: #01a17c;
     text-decoration: none;
 }
 
@@ -38,7 +38,7 @@ header {
 .logo {
     font-size: 24px;
     font-weight: 600;
-    color: #00ffc3;
+    color: #01a17c;
 }
 
 .nav-links {
@@ -54,7 +54,7 @@ header {
 }
 
 .nav-links li a:hover {
-    color: #00ffc3;
+    color: #01a17c;
 }
 
 section {
@@ -70,7 +70,7 @@ section {
 #inicio h2 {
     font-size: 36px;
     margin-bottom: 10px;
-    color: #00ffc3;
+    color: #01a17c
 }
 
 #inicio p {
@@ -82,7 +82,7 @@ section {
 #curriculo h2,
 #contato h2 {
     font-size: 28px;
-    color: #00ffc3;
+    color: #01a17c;
     margin-bottom: 20px;
 }
 
@@ -101,7 +101,7 @@ section {
     display: inline-block;
     margin-top: 10px;
     padding: 12px 20px;
-    background-color: #00ffc3;
+    background-color: #01a17c;
     color: #0f0f0f;
     font-weight: 600;
     border-radius: 8px;
