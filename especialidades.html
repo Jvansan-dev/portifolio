@@ -4,41 +4,140 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>João | Especialidades</title>
+    <title>João | Habilidades</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 
 <body>
     <header>
         <nav class="navbar">
-            <h1 class="logo">João.dev</h1>
+            <h1 class="logo"><span>João</span>.dev</h1>
             <ul class="nav-links">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="especialidades.html">Especialidades</a></li>
+                <li><a href="index.html#hero">Início</a></li>
+                <li><a href="index.html#about">Sobre</a></li>
+                <li><a href="#skills" class="active">Habilidades</a></li>
                 <li><a href="curriculo.html">Currículo</a></li>
-                <li><a href="contato.html">Contato</a></li>
+                <li><a href="index.html#contact">Contato</a></li>
             </ul>
-
+            <div class="mobile-menu-btn">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
         </nav>
     </header>
 
-    <section id="especialidades">
-        <h2>Especialidades</h2>
-        <ul>
-            <li>Linux: O Linux é um sistema operacional de código aberto baseado no Unix, criado por Linus Torvalds em
-                1991.
-                Ele é conhecido por sua estabilidade, segurança e flexibilidade, sendo amplamente utilizado em
-                servidores, desktops, dispositivos embarcados e até supercomputadores</li>
-            <li>HTML: Linguagem de marcação utilizada para estruturar o conteúdo na web.</li>
-            <li>CSS: Linguagem de estilo utilizada para descrever a apresentação de documentos HTML.</li>
-            <li>JavaScript: Linguagem de programação utilizada para criar interatividade em páginas web.</li>
-
-        </ul>
+    <!-- Seção Habilidades -->
+    <section id="skills" class="page-section">
+        <h2 class="section-title fade-in">Minhas Habilidades</h2>
+        <p class="section-subtitle fade-in">Tecnologias e ferramentas que domino para criar soluções digitais completas.</p>
+        
+        <div class="skills-container">
+            <div class="skill-card fade-in">
+                <div class="skill-icon">
+                    <i class="fab fa-html5"></i>
+                </div>
+                <h3 class="skill-name">HTML5</h3>
+                <p>Estruturação semântica e acessível para websites modernos.</p>
+                <div class="skill-level">
+                    <div class="skill-progress" data-percentage="95"></div>
+                </div>
+                <div class="skill-percentage">95%</div>
+            </div>
+            
+            <div class="skill-card fade-in">
+                <div class="skill-icon">
+                    <i class="fab fa-css3-alt"></i>
+                </div>
+                <h3 class="skill-name">CSS3</h3>
+                <p>Estilização avançada com Flexbox, Grid e animações.</p>
+                <div class="skill-level">
+                    <div class="skill-progress" data-percentage="90"></div>
+                </div>
+                <div class="skill-percentage">90%</div>
+            </div>
+            
+            <div class="skill-card fade-in">
+                <div class="skill-icon">
+                    <i class="fab fa-js"></i>
+                </div>
+                <h3 class="skill-name">JavaScript</h3>
+                <p>Desenvolvimento front-end e back-end com ES6+.</p>
+                <div class="skill-level">
+                    <div class="skill-progress" data-percentage="85"></div>
+                </div>
+                <div class="skill-percentage">85%</div>
+            </div>
+            
+            <div class="skill-card fade-in">
+                <div class="skill-icon">
+                    <i class="fab fa-react"></i>
+                </div>
+                <h3 class="skill-name">Next.js</h3>
+                <p>Framework React para aplicações web modernas.</p>
+                <div class="skill-level">
+                    <div class="skill-progress" data-percentage="40"></div>
+                </div>
+                <div class="skill-percentage">40%</div>
+            </div>
+        </div>
     </section>
 
+    <!-- Rodapé -->
     <footer>
-        <p>&copy; 2025 João. Todos os direitos reservados.</p>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2 class="logo"><span>João</span>.dev</h2>
+                <p>Transformando ideias em experiências digitais excepcionais.</p>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Navegação</h3>
+                    <ul>
+                        <li><a href="index.html#hero">Início</a></li>
+                        <li><a href="index.html#about">Sobre</a></li>
+                        <li><a href="#skills">Habilidades</a></li>
+                        <li><a href="curriculo.html">Currículo</a></li>
+                        <li><a href="index.html#contact">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Serviços</h3>
+                    <ul>
+                        <li><a href="#">Desenvolvimento Web</a></li>
+                        <li><a href="#">Desenvolvimento Mobile</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">Consultoria</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2023 João.dev. Todos os direitos reservados.</p>
+            <div class="footer-social">
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

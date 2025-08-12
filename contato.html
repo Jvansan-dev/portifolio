@@ -6,33 +6,154 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>João | Contato</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 
 <body>
     <header>
         <nav class="navbar">
-            <h1 class="logo">João.dev</h1>
+            <h1 class="logo"><span>João</span>.dev</h1>
             <ul class="nav-links">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="especialidades.html">Especialidades</a></li>
+                <li><a href="index.html#hero">Início</a></li>
+                <li><a href="index.html#about">Sobre</a></li>
+                <li><a href="index.html#skills">Habilidades</a></li>
                 <li><a href="curriculo.html">Currículo</a></li>
-                <li><a href="contato.html">Contato</a></li>
+                <li><a href="#contact" class="active">Contato</a></li>
             </ul>
-
+            <div class="mobile-menu-btn">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
         </nav>
     </header>
 
-    <section id="contato">
-        <h2>Contato</h2>
-        <p>Email: jv.vansan@gmail.com</p>
-        <a href="https://www.linkedin.com/in/seulink" target="_blank" class="btn-linkedin">
-            💼 Acessar meu LinkedIn
-        </a>
+    <!-- Seção Contato -->
+    <section id="contact" class="page-section">
+        <h2 class="section-title fade-in">Entre em Contato</h2>
+        <p class="section-subtitle fade-in">Vamos conversar sobre seu projeto e como posso ajudar a torná-lo realidade.
+        </p>
+
+        <div class="contact-grid">
+            <div class="contact-info fade-in-left">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Email</h3>
+                        <p>jv.vansan@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Telefone</h3>
+                        <p>+55 (44) 99964-0402</p>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Localização</h3>
+                        <p>Maringá/Pr, Brasil</p>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <form class="contact-form fade-in-right">
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Seu email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Assunto</label>
+                    <input type="text" id="subject" name="subject" placeholder="Assunto da mensagem" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" name="message" placeholder="Sua mensagem" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+            </form>
+        </div>
     </section>
 
+    <!-- Rodapé -->
     <footer>
-        <p>&copy; 2025 João. Todos os direitos reservados.</p>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2 class="logo"><span>João</span>.dev</h2>
+                <p>Transformando ideias em experiências digitais excepcionais.</p>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Navegação</h3>
+                    <ul>
+                        <li><a href="index.html#hero">Início</a></li>
+                        <li><a href="index.html#about">Sobre</a></li>
+                        <li><a href="index.html#skills">Habilidades</a></li>
+                        <li><a href="curriculo.html">Currículo</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Serviços</h3>
+                    <ul>
+                        <li><a href="#">Desenvolvimento Web</a></li>
+                        <li><a href="#">Desenvolvimento Mobile</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">Consultoria</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 João.dev. Todos os direitos reservados.</p>
+            <div class="footer-social">
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -6,30 +6,244 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>João | Currículo</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 
 <body>
     <header>
         <nav class="navbar">
-            <h1 class="logo">João.dev</h1>
+            <h1 class="logo"><span>João</span>.dev</h1>
             <ul class="nav-links">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="especialidades.html">Especialidades</a></li>
-                <li><a href="curriculo.html">Currículo</a></li>
-                <li><a href="contato.html">Contato</a></li>
+                <li><a href="index.html#hero">Início</a></li>
+                <li><a href="index.html#about">Sobre</a></li>
+                <li><a href="especialidades.html">Habilidades</a></li>
+                <li><a href="curriculo.html" class="active">Currículo</a></li>
+                <li><a href="index.html#contact">Contato</a></li>
             </ul>
-
+            <div class="mobile-menu-btn">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
         </nav>
     </header>
 
-    <section id="curriculo">
-        <h2>Currículo</h2>
-        <a href="assets/resume/joao_curriculo.pdf" download>📄 Baixar Currículo</a>
+    <!-- Seção Currículo -->
+    <section id="resume" class="page-section">
+        <h2 class="section-title fade-in">Meu Currículo</h2>
+        <p class="section-subtitle fade-in">Minha trajetória profissional e acadêmica.</p>
+
+        <div class="resume-container">
+            <div class="resume-download fade-in">
+                <h3>Baixe meu currículo completo</h3>
+                <p>Para mais detalhes sobre minha experiência e qualificações, faça o download do meu currículo em PDF.
+                </p>
+                <a href="assets/resume/Currículo Jv.pdf" class="btn btn-primary" download><i
+                        class="fas fa-download"></i> Download CV</a>
+            </div>
+
+            <div class="resume-sections">
+                <div class="resume-section fade-in">
+                    <h3><i class="fas fa-briefcase"></i> Experiência Profissional</h3>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">Fev. de 2025 - Até o momento</div>
+                            <div class="timeline-content">
+                                <h4>Técnico de Suporte Trainee I</h4>
+                                <h5>SG SISTEMAS</h5>
+                                <p>Suporte técnico e treinamento para usuários do sistema.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">Jan. de 2025 - 2 anos</div>
+                            <div class="timeline-content">
+                                <h4>Assistente Financeiro</h4>
+                                <h5>LEJON AUTO SERVIÇO</h5>
+                                <p>Responsável por criar e lançar relatórios financeiros, movimentação de contas,
+                                    fechamento mensal, organização extratos bancários.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">Fev. de 2024</div>
+                            <div class="timeline-content">
+                                <h4>Conferente</h4>
+                                <h5>JUI de 2023</h5>
+                                <p>Responsável pela entrada e descarga de mercadoria com nota fiscal, conferência por
+                                    guia cega.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">Fev. de 2023 - Jul. de 2023</div>
+                            <div class="timeline-content">
+                                <h4>Repositor</h4>
+                                <h5>Empresa</h5>
+                                <p>Reposição de mercadorias, prazo de validade, organização de gôndolas e prateleiras.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">Ago. de 2020 - 1 ano e 6 meses</div>
+                            <div class="timeline-content">
+                                <h4>Jovem Aprendiz</h4>
+                                <h5>HOSPITAL E MATERNIDADE SÃO MARCOS</h5>
+                                <p>Atuação na área administrativa no setor de faturamento, fechamento de contas paciente
+                                    no sistema, organização dos arquivos, auditoria de contas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-section fade-in">
+                    <h3><i class="fas fa-graduation-cap"></i> Formação Acadêmica</h3>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">2024 - 2028</div>
+                            <div class="timeline-content">
+                                <h4>BACHARELADO EM ENGENHARIA DE SOFTWARE</h4>
+                                <h5>Unicesumar</h5>
+                                <p>Formação em andamento com foco em desenvolvimento de software e engenharia de
+                                    sistemas.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">2024</div>
+                            <div class="timeline-content">
+                                <h4>Excel - 50 horas</h4>
+                                <h5>CEPED</h5>
+                                <p>Curso de Excel com foco em análise de dados e automação de tarefas.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">2017</div>
+                            <div class="timeline-content">
+                                <h4>Geração Web - Informática atualizada - 200 horas</h4>
+                                <h5>CEBRAC</h5>
+                                <p>Curso de informática com foco em desenvolvimento web, incluindo HTML e CSS.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-section fade-in">
+                    <h3><i class="fas fa-user-check"></i> Habilidades Pessoais</h3>
+
+                    <div class="skills-personal">
+                        <ul class="skills-list">
+                            <li><i class="fas fa-check-circle"></i> Trabalho em equipe</li>
+                            <li><i class="fas fa-check-circle"></i> Solução de problemas</li>
+                            <li><i class="fas fa-check-circle"></i> Capacidade analítica</li>
+                            <li><i class="fas fa-check-circle"></i> Fácil aprendizado</li>
+                            <li><i class="fas fa-check-circle"></i> Domínio de ferramentas de software</li>
+                            <li><i class="fas fa-check-circle"></i> Comunicação eficaz</li>
+                            <li><i class="fas fa-check-circle"></i> Organização</li>
+                            <li><i class="fas fa-check-circle"></i> Atenção aos detalhes</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="resume-section fade-in">
+                    <h3><i class="fas fa-language"></i> Idiomas</h3>
+
+                    <div class="languages">
+                        <div class="language-item">
+                            <h4>Português</h4>
+                            <div class="language-level">
+                                <div class="language-progress" style="width: 100%;"></div>
+                            </div>
+                            <span>Nativo</span>
+                        </div>
+
+                        <div class="language-item">
+                            <h4>Inglês</h4>
+                            <div class="language-level">
+                                <div class="language-progress" style="width: 90%;"></div>
+                            </div>
+                            <span>Fluente</span>
+                        </div>
+
+                        <div class="language-item">
+                            <h4>Espanhol</h4>
+                            <div class="language-level">
+                                <div class="language-progress" style="width: 70%;"></div>
+                            </div>
+                            <span>Intermediário</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- Rodapé -->
     <footer>
-        <p>&copy; 2025 João. Todos os direitos reservados.</p>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2 class="logo"><span>João</span>.dev</h2>
+                <p>Transformando ideias em experiências digitais excepcionais.</p>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Navegação</h3>
+                    <ul>
+                        <li><a href="index.html#hero">Início</a></li>
+                        <li><a href="index.html#about">Sobre</a></li>
+                        <li><a href="especialidades.html">Habilidades</a></li>
+                        <li><a href="curriculo.html">Currículo</a></li>
+                        <li><a href="index.html#contact">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Serviços</h3>
+                    <ul>
+                        <li><a href="#">Desenvolvimento Web</a></li>
+                        <li><a href="#">Desenvolvimento Mobile</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">Consultoria</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2023 João.dev. Todos os direitos reservados.</p>
+            <div class="footer-social">
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
