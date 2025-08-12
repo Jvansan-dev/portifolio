@@ -57,7 +57,11 @@ body {
 }
 
 a {
+<<<<<<< HEAD
     color: var(--primary-color);
+=======
+    color: #01a17c;
+>>>>>>> 4d208d668b3599702e81446fe6bc7d35b160cf77
     text-decoration: none;
     transition: var(--transition-fast);
     position: relative;
@@ -112,6 +116,7 @@ header.scrolled {
 }
 
 .logo {
+<<<<<<< HEAD
     font-size: 28px;
     font-weight: 700;
     color: var(--light-text);
@@ -139,6 +144,11 @@ header.scrolled {
     top: 50%;
     transform: translateY(-50%);
     box-shadow: 0 0 15px var(--accent-color);
+=======
+    font-size: 24px;
+    font-weight: 600;
+    color: #01a17c;
+>>>>>>> 4d208d668b3599702e81446fe6bc7d35b160cf77
 }
 
 .nav-links {
@@ -154,10 +164,15 @@ header.scrolled {
     letter-spacing: 0.5px;
 }
 
+<<<<<<< HEAD
 .mobile-menu-btn {
     display: none;
     cursor: pointer;
     z-index: 1001;
+=======
+.nav-links li a:hover {
+    color: #01a17c;
+>>>>>>> 4d208d668b3599702e81446fe6bc7d35b160cf77
 }
 
 .mobile-menu-btn .bar {
@@ -176,6 +191,7 @@ section {
     position: relative;
 }
 
+<<<<<<< HEAD
 .section-title {
     font-size: 3rem;
     margin-bottom: 2rem;
@@ -250,6 +266,48 @@ section {
 .btn {
     padding: 12px 30px;
     border-radius: 50px;
+=======
+#inicio {
+    text-align: center;
+}
+
+#inicio h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #01a17c
+}
+
+#inicio p {
+    font-size: 18px;
+    color: #ccc;
+}
+
+#especialidades h2,
+#curriculo h2,
+#contato h2 {
+    font-size: 28px;
+    color: #01a17c;
+    margin-bottom: 20px;
+}
+
+#especialidades ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#especialidades ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+    color: #ccc;
+}
+
+#curriculo a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 20px;
+    background-color: #01a17c;
+    color: #0f0f0f;
+>>>>>>> 4d208d668b3599702e81446fe6bc7d35b160cf77
     font-weight: 600;
     font-size: 1rem;
     transition: var(--transition-medium);
