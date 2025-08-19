@@ -7,13 +7,13 @@
     <title>João | Currículo</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
 </head>
 
 <body>
     <!-- Fundo animado com estrelas -->
     <div class="stars-background" id="starsBackground"></div>
-    
+
     <header>
         <nav class="navbar">
             <h1 class="logo"><span>João</span>.dev</h1>
@@ -42,8 +42,8 @@
                 <h3>Baixe meu currículo completo</h3>
                 <p>Para mais detalhes sobre minha experiência e qualificações, faça o download do meu currículo em PDF.
                 </p>
-                <a href="assets/resume/Currículo Jv.pdf" class="btn btn-primary" download><i
-                        class="fas fa-download"></i> Download CV</a>
+                <a href="assets/resume/Currículo Joao.pdf" class="btn btn-primary" download><i
+                        class="fas fa-download"></i> Download Currículo</a>
             </div>
 
             <div class="resume-sections">
@@ -57,13 +57,14 @@
                             <div class="timeline-content">
                                 <h4>Técnico de Suporte Trainee I</h4>
                                 <h5>SG SISTEMAS</h5>
-                                <p>Suporte técnico e treinamento para usuários do sistema.</p>
+                                <p>Suporte técnico e treinamento para usuários do sistema, solução de problemas
+                                    técnicos, atendimento ao cliente, suporte em ambiente Linux.</p>
                             </div>
                         </div>
 
                         <div class="timeline-item">
                             <div class="timeline-dot"></div>
-                            <div class="timeline-date">Jan. de 2025 - 2 anos</div>
+                            <div class="timeline-date">Fev. de 2024 - Jan. de 2025</div>
                             <div class="timeline-content">
                                 <h4>Assistente Financeiro</h4>
                                 <h5>LEJON AUTO SERVIÇO</h5>
@@ -74,26 +75,14 @@
 
                         <div class="timeline-item">
                             <div class="timeline-dot"></div>
-                            <div class="timeline-date">Fev. de 2024</div>
+                            <div class="timeline-date">Jul. de 2023 - Fev. de 2024</div>
                             <div class="timeline-content">
                                 <h4>Conferente</h4>
-                                <h5>JUI de 2023</h5>
+                                <h5>LEJON AUTO SERVIÇO</h5>
                                 <p>Responsável pela entrada e descarga de mercadoria com nota fiscal, conferência por
                                     guia cega.</p>
                             </div>
                         </div>
-
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-date">Fev. de 2023 - Jul. de 2023</div>
-                            <div class="timeline-content">
-                                <h4>Repositor</h4>
-                                <h5>Empresa</h5>
-                                <p>Reposição de mercadorias, prazo de validade, organização de gôndolas e prateleiras.
-                                </p>
-                            </div>
-                        </div>
-
                         <div class="timeline-item">
                             <div class="timeline-dot"></div>
                             <div class="timeline-date">Ago. de 2020 - 1 ano e 6 meses</div>
@@ -243,43 +232,43 @@
         function createStars() {
             const starsContainer = document.getElementById('starsBackground');
             const numberOfStars = 100;
-            
+
             for (let i = 0; i < numberOfStars; i++) {
                 const star = document.createElement('div');
                 star.className = 'star';
-                
+
                 // Posição aleatória
                 star.style.left = Math.random() * 100 + '%';
                 star.style.top = Math.random() * 100 + '%';
-                
+
                 // Tamanho aleatório
                 const size = Math.random() * 3 + 1;
                 star.style.width = size + 'px';
                 star.style.height = size + 'px';
-                
+
                 // Delay aleatório para animação
                 star.style.animationDelay = Math.random() * 3 + 's';
-                
+
                 starsContainer.appendChild(star);
             }
-            
+
             // Criar estrelas cadentes
             for (let i = 0; i < 3; i++) {
                 const shootingStar = document.createElement('div');
                 shootingStar.className = 'shooting-star';
-                
+
                 shootingStar.style.left = Math.random() * 100 + '%';
                 shootingStar.style.top = Math.random() * 50 + '%';
                 shootingStar.style.animationDelay = Math.random() * 8 + 's';
-                
+
                 starsContainer.appendChild(shootingStar);
             }
         }
-        
+
         // Inicializar quando a página carregar
         document.addEventListener('DOMContentLoaded', createStars);
     </script>
-    
+
     <script src="script.js"></script>
 </body>
 
