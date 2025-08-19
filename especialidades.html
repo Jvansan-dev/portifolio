@@ -11,6 +11,9 @@
 </head>
 
 <body>
+    <!-- Fundo animado com estrelas -->
+    <div class="stars-background" id="starsBackground"></div>
+    
     <header>
         <nav class="navbar">
             <h1 class="logo"><span>João</span>.dev</h1>
@@ -137,6 +140,48 @@
         </div>
     </footer>
 
+    <script>
+        // Gerar estrelas animadas
+        function createStars() {
+            const starsContainer = document.getElementById('starsBackground');
+            const numberOfStars = 100;
+            
+            for (let i = 0; i < numberOfStars; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                
+                // Posição aleatória
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                
+                // Tamanho aleatório
+                const size = Math.random() * 3 + 1;
+                star.style.width = size + 'px';
+                star.style.height = size + 'px';
+                
+                // Delay aleatório para animação
+                star.style.animationDelay = Math.random() * 3 + 's';
+                
+                starsContainer.appendChild(star);
+            }
+            
+            // Criar estrelas cadentes
+            for (let i = 0; i < 3; i++) {
+                const shootingStar = document.createElement('div');
+                shootingStar.className = 'shooting-star';
+                
+                shootingStar.style.left = Math.random() * 100 + '%';
+                shootingStar.style.top = Math.random() * 50 + '%';
+                shootingStar.style.animationDelay = Math.random() * 8 + 's';
+                
+                starsContainer.appendChild(shootingStar);
+            }
+        }
+        
+        // Inicializar quando a página carregar
+        document.addEventListener('DOMContentLoaded', createStars);
+    </script>
+    
     <script src="script.js"></script>
 </body>
 
