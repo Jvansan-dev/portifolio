@@ -13,7 +13,7 @@
 <body>
     <!-- Fundo animado com estrelas -->
     <div class="stars-background" id="starsBackground"></div>
-    
+
     <header>
         <nav class="navbar">
             <h1 class="logo"><span>João</span>.dev</h1>
@@ -35,8 +35,9 @@
     <!-- Seção Habilidades -->
     <section id="skills" class="page-section">
         <h2 class="section-title fade-in">Minhas Habilidades</h2>
-        <p class="section-subtitle fade-in">Tecnologias e ferramentas que domino para criar soluções digitais completas.</p>
-        
+        <p class="section-subtitle fade-in">Tecnologias e ferramentas que domino para criar soluções digitais completas.
+        </p>
+
         <div class="skills-container">
             <div class="skill-card fade-in">
                 <div class="skill-icon">
@@ -44,46 +45,38 @@
                 </div>
                 <h3 class="skill-name">HTML5</h3>
                 <p>Estruturação semântica e acessível para websites modernos.</p>
-                <div class="skill-level">
-                    <div class="skill-progress" data-percentage="95"></div>
-                </div>
-                <div class="skill-percentage">95%</div>
             </div>
-            
+
             <div class="skill-card fade-in">
                 <div class="skill-icon">
                     <i class="fab fa-css3-alt"></i>
                 </div>
                 <h3 class="skill-name">CSS3</h3>
                 <p>Estilização avançada com Flexbox, Grid e animações.</p>
-                <div class="skill-level">
-                    <div class="skill-progress" data-percentage="90"></div>
-                </div>
-                <div class="skill-percentage">90%</div>
             </div>
-            
+
             <div class="skill-card fade-in">
                 <div class="skill-icon">
                     <i class="fab fa-js"></i>
                 </div>
                 <h3 class="skill-name">JavaScript</h3>
-                <p>Desenvolvimento front-end e back-end com ES6+.</p>
-                <div class="skill-level">
-                    <div class="skill-progress" data-percentage="85"></div>
-                </div>
-                <div class="skill-percentage">85%</div>
+                <p>Desenvolvimento front-end.</p>
             </div>
-            
+
             <div class="skill-card fade-in">
                 <div class="skill-icon">
                     <i class="fab fa-react"></i>
                 </div>
                 <h3 class="skill-name">Next.js</h3>
                 <p>Framework React para aplicações web modernas.</p>
-                <div class="skill-level">
-                    <div class="skill-progress" data-percentage="40"></div>
+            </div>
+
+            <div class="skill-card fade-in">
+                <div class="skill-icon">
+                    <i class="fas fa-code"></i>
                 </div>
-                <div class="skill-percentage">40%</div>
+                <h3 class="skill-name">C</h3>
+                <p>Programação de sistemas e aplicações.</p>
             </div>
         </div>
     </section>
@@ -95,7 +88,7 @@
                 <h2 class="logo"><span>João</span>.dev</h2>
                 <p>Transformando ideias em experiências digitais excepcionais.</p>
             </div>
-            
+
             <div class="footer-links">
                 <div class="footer-column">
                     <h3>Navegação</h3>
@@ -107,7 +100,7 @@
                         <li><a href="index.html#contact">Contato</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-column">
                     <h3>Serviços</h3>
                     <ul>
@@ -117,7 +110,7 @@
                         <li><a href="#">Consultoria</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-column">
                     <h3>Legal</h3>
                     <ul>
@@ -128,9 +121,9 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="footer-bottom">
-            <p>&copy; 2023 João.dev. Todos os direitos reservados.</p>
+            <p>&copy; 2025 João.dev. Todos os direitos reservados.</p>
             <div class="footer-social">
                 <a href="#" class="social-link"><i class="fab fa-github"></i></a>
                 <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
@@ -145,43 +138,43 @@
         function createStars() {
             const starsContainer = document.getElementById('starsBackground');
             const numberOfStars = 100;
-            
+
             for (let i = 0; i < numberOfStars; i++) {
                 const star = document.createElement('div');
                 star.className = 'star';
-                
+
                 // Posição aleatória
                 star.style.left = Math.random() * 100 + '%';
                 star.style.top = Math.random() * 100 + '%';
-                
+
                 // Tamanho aleatório
                 const size = Math.random() * 3 + 1;
                 star.style.width = size + 'px';
                 star.style.height = size + 'px';
-                
+
                 // Delay aleatório para animação
                 star.style.animationDelay = Math.random() * 3 + 's';
-                
+
                 starsContainer.appendChild(star);
             }
-            
+
             // Criar estrelas cadentes
             for (let i = 0; i < 3; i++) {
                 const shootingStar = document.createElement('div');
                 shootingStar.className = 'shooting-star';
-                
+
                 shootingStar.style.left = Math.random() * 100 + '%';
                 shootingStar.style.top = Math.random() * 50 + '%';
                 shootingStar.style.animationDelay = Math.random() * 8 + 's';
-                
+
                 starsContainer.appendChild(shootingStar);
             }
         }
-        
+
         // Inicializar quando a página carregar
         document.addEventListener('DOMContentLoaded', createStars);
     </script>
-    
+
     <script src="script.js"></script>
 </body>
 
