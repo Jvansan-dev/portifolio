@@ -1,4 +1,9 @@
 // Variáveis globais
+const EMAILJS_ENABLED = true;
+const EMAILJS_SERVICE_ID = 'service_00utrnh';
+const EMAILJS_TEMPLATE_ID = 'template_bllk4pi';
+const EMAILJS_PUBLIC_KEY = 'NrFsiKVMN1nurfHim';
+const EMAILJS_TO_EMAIL = 'jvansan.dev@gmail.com';
 
 // Detectar quando o DOM está carregado
 document.addEventListener('DOMContentLoaded', () => {
@@ -8,6 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initHeaderScroll();
     initSkillsAnimation();
     initCounters();
+    initEmailJS();
+    console.log('[EmailJS] Enabled:', EMAILJS_ENABLED, 'Service:', EMAILJS_SERVICE_ID, 'Template:', EMAILJS_TEMPLATE_ID);
 
 
 
@@ -171,20 +178,111 @@ const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-
-        // Aqui você adicionaria a lógica para enviar o formulário
-        // Por enquanto, apenas simulamos o envio
         const submitBtn = contactForm.querySelector('.form-submit');
-        const originalText = submitBtn.textContent;
+        const btnText = submitBtn.querySelector('.btn-text');
+        const statusEl = contactForm.querySelector('.form-status');
 
-        submitBtn.textContent = 'Enviando...';
+        // Capturar dados
+        const name = contactForm.querySelector('#name')?.value?.trim() || '';
+        const email = contactForm.querySelector('#email')?.value?.trim() || '';
+        const subject = contactForm.querySelector('#subject')?.value?.trim() || '';
+        const message = contactForm.querySelector('#message')?.value?.trim() || '';
+
+        // Validação simples
+        if (!name || !email || !subject || !message) {
+            if (statusEl) {
+                statusEl.textContent = 'Por favor, preencha todos os campos.';
+                statusEl.classList.remove('success');
+                statusEl.classList.add('error');
+            }
+            return;
+        }
+
+        // Estado de loading
+        const originalText = btnText ? btnText.textContent : submitBtn.textContent;
+        if (btnText) btnText.textContent = 'Enviando...'; else submitBtn.textContent = 'Enviando...';
+        submitBtn.classList.add('loading');
         submitBtn.disabled = true;
+        if (statusEl) {
+            statusEl.textContent = 'Enviando sua mensagem...';
+            statusEl.classList.remove('error', 'success');
+        }
 
-        setTimeout(() => {
-            alert('Mensagem enviada com sucesso!');
-            contactForm.reset();
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-        }, 1500);
+        // Enviar via EmailJS; salvar no localStorage como fallback
+        const payload = { name, email, subject, message };
+        console.log('[EmailJS] Sending payload:', payload);
+        sendViaEmailJS(payload)
+            .then(() => {
+                if (statusEl) {
+                    statusEl.textContent = '';
+                    statusEl.classList.remove('error', 'success');
+                }
+                contactForm.reset();
+                showSuccessModal();
+            })
+            .catch((err) => {
+                console.error('[EmailJS] Send error:', err);
+                const entry = { name, email, subject, message, timestamp: new Date().toISOString() };
+                const existing = JSON.parse(localStorage.getItem('contactMessages') || '[]');
+                existing.push(entry);
+                localStorage.setItem('contactMessages', JSON.stringify(existing));
+                if (statusEl) {
+                    const detail = err?.text || err?.message || '';
+                    statusEl.textContent = 'Não foi possível enviar agora. Mensagem salva localmente. ' + detail;
+                    statusEl.classList.remove('success');
+                    statusEl.classList.add('error');
+                }
+            })
+            .finally(() => {
+                if (btnText) btnText.textContent = originalText; else submitBtn.textContent = originalText;
+                submitBtn.classList.remove('loading');
+                submitBtn.disabled = false;
+            });
     });
+}
+// Modal de sucesso
+function showSuccessModal() {
+    const modal = document.getElementById('successModal');
+    if (!modal) return;
+    const confirmBtn = modal.querySelector('.modal-confirm');
+
+    const close = () => {
+        modal.classList.remove('open');
+        document.body.style.overflow = '';
+        window.removeEventListener('keydown', onKeyDown);
+        modal.removeEventListener('click', onBackdrop);
+        if (confirmBtn) confirmBtn.removeEventListener('click', close);
+    };
+    const onKeyDown = (ev) => { if (ev.key === 'Escape') close(); };
+    const onBackdrop = (ev) => { if (ev.target === modal) close(); };
+
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', onKeyDown);
+    modal.addEventListener('click', onBackdrop);
+    if (confirmBtn) confirmBtn.addEventListener('click', close);
+}
+function initEmailJS() {
+    if (EMAILJS_ENABLED && window.emailjs && EMAILJS_PUBLIC_KEY) {
+        try { window.emailjs.init(EMAILJS_PUBLIC_KEY); console.log('[EmailJS] Initialized with PUBLIC_KEY'); } catch (e) { console.error('[EmailJS] Init error:', e); }
+    }
+}
+
+function sendViaEmailJS(params) {
+    if (!(EMAILJS_ENABLED && window.emailjs && EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID && EMAILJS_PUBLIC_KEY)) {
+        return Promise.reject(new Error('EmailJS não configurado'));
+    }
+    // Mapear exatamente como está no seu template:
+    // Subject usa {{title}}, From Name usa {{name}}, Reply To usa {{email}}, conteúdo usa {{message}}
+    const templateParams = {
+        title: params.subject || 'Contato',
+        name: params.name,
+        email: params.email,
+        reply_to: params.email,
+        message: params.message,
+        to_email: EMAILJS_TO_EMAIL,
+        time: new Date().toLocaleString('pt-BR')
+    };
+    console.log('[EmailJS] Sending with params:', templateParams);
+    return window.emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams);
 }

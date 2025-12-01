@@ -2,17 +2,14 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>João | Desenvolvedor Full-Stack</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-    <title>Redirecionando...</title>
-    <script>
-        // Redireciona automaticamente
-        window.location.href = "manutencao.html";
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>João.dev</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta name="theme-color" content="#0a1a0f">
 </head>
 
 <body>
@@ -46,8 +43,8 @@
             <p class="hero-description">Transformando ideias em experiências digitais excepcionais com código limpo e
                 design inovador.</p>
             <div class="hero-cta">
-                <a href="curriculo.html" class="btn btn-primary">Ver Currículo</a>
-                <a href="#contact" class="btn btn-secondary">Fale Comigo</a>
+                <a href="curriculo.html" class="btn btn-cyber">Ver Currículo</a>
+                <a href="#contact" class="btn btn-cyber">Fale Comigo</a>
             </div>
         </div>
 
@@ -127,8 +124,17 @@
                 <p>Programação de sistemas e aplicações.</p>
             </div>
 
+            <div class="skill-card fade-in">
+                <div class="skill-icon">
+                    <i class="fas fa-terminal"></i>
+                </div>
+                <h3 class="skill-name">Harbour</h3>
+                <p>Dialeto xBase (Clipper) para aplicações robustas.</p>
+            </div>
+
         </div>
     </section>
+
 
 
 
@@ -146,7 +152,7 @@
                     </div>
                     <div class="contact-details">
                         <h3>Email</h3>
-                        <p>jv.vansan@gmail.com</p>
+                        <p>jvansan.dev@gmail.com</p>
                     </div>
                 </div>
 
@@ -182,26 +188,33 @@
 
             <form class="contact-form fade-in-right">
                 <div class="form-group">
-                    <label for="name">Nome</label>
-                    <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                    <label class="form-label" for="name">Nome</label>
+                    <input class="form-input" type="text" id="name" name="name" placeholder="Seu nome" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Seu email" required>
+                    <label class="form-label" for="email">Email</label>
+                    <input class="form-input" type="email" id="email" name="email" placeholder="Seu email" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="subject">Assunto</label>
-                    <input type="text" id="subject" name="subject" placeholder="Assunto da mensagem" required>
+                    <label class="form-label" for="subject">Assunto</label>
+                    <input class="form-input" type="text" id="subject" name="subject" placeholder="Assunto da mensagem"
+                        required>
                 </div>
 
                 <div class="form-group">
-                    <label for="message">Mensagem</label>
-                    <textarea id="message" name="message" placeholder="Sua mensagem" required></textarea>
+                    <label class="form-label" for="message">Mensagem</label>
+                    <textarea class="form-textarea" id="message" name="message" placeholder="Sua mensagem"
+                        required></textarea>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                <div class="form-status" aria-live="polite"></div>
+
+                <button type="submit" class="btn btn-cyber form-submit">
+                    <span class="btn-text">Enviar Mensagem</span>
+                    <span class="btn-loader" aria-hidden="true"></span>
+                </button>
             </form>
         </div>
     </section>
@@ -258,6 +271,19 @@
         </div>
     </footer>
 
+    <!-- Modal de sucesso -->
+    <div id="successModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="successTitle"
+        aria-modal="true">
+        <div class="modal-card" role="document">
+            <div class="modal-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></div>
+            <h3 id="successTitle" class="modal-title">Mensagem enviada com sucesso!</h3>
+            <p class="modal-desc">Obrigado pelo contato. Vou responder em breve.</p>
+            <div class="modal-actions">
+                <button type="button" class="btn btn-cyber modal-confirm">Ok, obrigado</button>
+            </div>
+        </div>
+    </div>
+
     <script>
         // Gerar estrelas animadas
         function createStars() {
@@ -300,6 +326,7 @@
         document.addEventListener('DOMContentLoaded', createStars);
     </script>
 
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="script.js"></script>
 </body>
 

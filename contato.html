@@ -43,7 +43,7 @@
                     </div>
                     <div class="contact-details">
                         <h3>Email</h3>
-                        <p>jv.vansan@gmail.com</p>
+                        <p>jvansan.dev@gmail.com</p>
                     </div>
                 </div>
 
@@ -77,26 +77,33 @@
 
             <form class="contact-form fade-in-right">
                 <div class="form-group">
-                    <label for="name">Nome</label>
-                    <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                    <label class="form-label" for="name">Nome</label>
+                    <input class="form-input" type="text" id="name" name="name" placeholder="Seu nome" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Seu email" required>
+                    <label class="form-label" for="email">Email</label>
+                    <input class="form-input" type="email" id="email" name="email" placeholder="Seu email" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="subject">Assunto</label>
-                    <input type="text" id="subject" name="subject" placeholder="Assunto da mensagem" required>
+                    <label class="form-label" for="subject">Assunto</label>
+                    <input class="form-input" type="text" id="subject" name="subject" placeholder="Assunto da mensagem"
+                        required>
                 </div>
 
                 <div class="form-group">
-                    <label for="message">Mensagem</label>
-                    <textarea id="message" name="message" placeholder="Sua mensagem" required></textarea>
+                    <label class="form-label" for="message">Mensagem</label>
+                    <textarea class="form-textarea" id="message" name="message" placeholder="Sua mensagem"
+                        required></textarea>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                <div class="form-status" aria-live="polite"></div>
+
+                <button type="submit" class="btn btn-cyber form-submit">
+                    <span class="btn-text">Enviar Mensagem</span>
+                    <span class="btn-loader" aria-hidden="true"></span>
+                </button>
             </form>
         </div>
     </section>
@@ -153,6 +160,20 @@
         </div>
     </footer>
 
+    <!-- Modal de sucesso -->
+    <div id="successModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="successTitle"
+        aria-modal="true">
+        <div class="modal-card" role="document">
+            <div class="modal-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></div>
+            <h3 id="successTitle" class="modal-title">Mensagem enviada com sucesso!</h3>
+            <p class="modal-desc">Obrigado pelo contato. Vou responder em breve.</p>
+            <div class="modal-actions">
+                <button type="button" class="btn btn-cyber modal-confirm">Ok, obrigado</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="script.js"></script>
 </body>
 
