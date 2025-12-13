@@ -4,24 +4,21 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>João | Habilidades</title>
+    <title>João | Projetos</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
 <body>
-    <!-- Fundo animado com estrelas -->
     <div class="stars-background" id="starsBackground"></div>
-
     <header>
         <nav class="navbar">
             <h1 class="logo"><span>João</span>.dev</h1>
             <ul class="nav-links">
                 <li><a href="index.html#hero">Início</a></li>
                 <li><a href="index.html#about">Sobre</a></li>
-                <li><a href="#skills" class="active">Habilidades</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="especialidades.html">Habilidades</a></li>
+                <li><a href="projetos.html" class="active">Projetos</a></li>
                 <li><a href="curriculo.html">Currículo</a></li>
                 <li><a href="index.html#contact">Contato</a></li>
             </ul>
@@ -33,84 +30,64 @@
         </nav>
     </header>
 
-    <!-- Seção Habilidades -->
-    <section id="skills" class="page-section">
-        <h2 class="section-title fade-in">Minhas Habilidades</h2>
-        <p class="section-subtitle fade-in">Tecnologias e ferramentas que domino para criar soluções digitais completas.
-        </p>
+    <section id="projects" class="page-section">
+        <h2 class="section-title fade-in">Projetos</h2>
+        <p class="section-subtitle fade-in">Alguns trabalhos e estudos que desenvolvi.</p>
 
-        <div class="skills-container">
-            <div class="skill-card fade-in">
-                <div class="skill-icon">
-                    <i class="fab fa-html5"></i>
+        <div class="projects-grid">
+            <div class="project-card fade-in">
+                <div class="project-image">
+                    <img src="assets/images/moviefinder-card.png" alt="MovieFinder preview"
+                        onerror="this.src='assets/images/profile.jpg'">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a class="project-link" href="https://movieproxy.onrender.com/" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fas fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="skill-name">HTML5</h3>
-                <p>Estruturação semântica e acessível para websites modernos.</p>
-            </div>
-
-            <div class="skill-card fade-in">
-                <div class="skill-icon">
-                    <i class="fab fa-css3-alt"></i>
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span class="project-tag">Node.js</span>
+                        <span class="project-tag">Express</span>
+                        <span class="project-tag">Render</span>
+                    </div>
+                    <h3 class="project-title">MovieFinder</h3>
+                    <p class="project-description">Serviço simples de buscador de filmes, com consulta a sinopse,
+                        detalhes e elenco.
+                        e performance.</p>
+                    <div class="project-footer">
+                        <span class="project-date">2025</span>
+                        <a class="view-project" href="https://movieproxy.onrender.com/" target="_blank"
+                            rel="noopener noreferrer">
+                            Ver Projeto <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
-                <h3 class="skill-name">CSS3</h3>
-                <p>Estilização avançada com Flexbox, Grid e animações.</p>
-            </div>
-
-            <div class="skill-card fade-in">
-                <div class="skill-icon">
-                    <i class="fab fa-js"></i>
-                </div>
-                <h3 class="skill-name">JavaScript</h3>
-                <p>Desenvolvimento front-end.</p>
-            </div>
-
-            <div class="skill-card fade-in">
-                <div class="skill-icon">
-                    <i class="fab fa-node-js"></i>
-                </div>
-                <h3 class="skill-name">Node.js</h3>
-                <p>Ambiente de execução JavaScript no servidor.</p>
-            </div>
-
-            <div class="skill-card fade-in">
-                <div class="skill-icon">
-                    <i class="fas fa-code"></i>
-                </div>
-                <h3 class="skill-name">C</h3>
-                <p>Programação de sistemas e aplicações.</p>
-            </div>
-
-            <div class="skill-card fade-in">
-                <div class="skill-icon">
-                    <i class="fas fa-terminal"></i>
-                </div>
-                <h3 class="skill-name">Harbour</h3>
-                <p>Dialeto xBase (Clipper) para aplicações robustas.</p>
             </div>
         </div>
     </section>
 
-    <!-- Rodapé -->
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
                 <h2 class="logo"><span>João</span>.dev</h2>
                 <p>Transformando ideias em experiências digitais excepcionais.</p>
             </div>
-
             <div class="footer-links">
                 <div class="footer-column">
                     <h3>Navegação</h3>
                     <ul>
                         <li><a href="index.html#hero">Início</a></li>
                         <li><a href="index.html#about">Sobre</a></li>
-                        <li><a href="#skills">Habilidades</a></li>
+                        <li><a href="especialidades.html">Habilidades</a></li>
                         <li><a href="projetos.html">Projetos</a></li>
                         <li><a href="curriculo.html">Currículo</a></li>
                         <li><a href="index.html#contact">Contato</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-column">
                     <h3>Serviços</h3>
                     <ul>
@@ -120,7 +97,6 @@
                         <li><a href="#">Consultoria</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-column">
                     <h3>Legal</h3>
                     <ul>
@@ -131,7 +107,6 @@
                 </div>
             </div>
         </div>
-
         <div class="footer-bottom">
             <p>&copy; 2025 João.dev. Todos os direitos reservados.</p>
             <div class="footer-social">
@@ -144,47 +119,31 @@
     </footer>
 
     <script>
-        // Gerar estrelas animadas
         function createStars() {
             const starsContainer = document.getElementById('starsBackground');
             const numberOfStars = 100;
-
             for (let i = 0; i < numberOfStars; i++) {
                 const star = document.createElement('div');
                 star.className = 'star';
-
-                // Posição aleatória
                 star.style.left = Math.random() * 100 + '%';
                 star.style.top = Math.random() * 100 + '%';
-
-                // Tamanho aleatório
                 const size = Math.random() * 3 + 1;
                 star.style.width = size + 'px';
                 star.style.height = size + 'px';
-
-                // Delay aleatório para animação
                 star.style.animationDelay = Math.random() * 3 + 's';
-
                 starsContainer.appendChild(star);
             }
-
-            // Criar estrelas cadentes
             for (let i = 0; i < 3; i++) {
                 const shootingStar = document.createElement('div');
                 shootingStar.className = 'shooting-star';
-
                 shootingStar.style.left = Math.random() * 100 + '%';
                 shootingStar.style.top = Math.random() * 50 + '%';
                 shootingStar.style.animationDelay = Math.random() * 8 + 's';
-
                 starsContainer.appendChild(shootingStar);
             }
         }
-
-        // Inicializar quando a página carregar
         document.addEventListener('DOMContentLoaded', createStars);
     </script>
-
     <script src="script.js"></script>
 </body>
 
