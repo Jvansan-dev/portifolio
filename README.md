@@ -1,4 +1,4 @@
-# Portfólio Premium de Desenvolvedor Full-Stack
+# Portfólio de Desenvolvedor Full-Stack
 
 Este é um site de portfólio ultra premium, visualmente deslumbrante e totalmente responsivo para um desenvolvedor full-stack fictício. O site foi desenvolvido utilizando apenas HTML, CSS e JavaScript, com foco em animações avançadas, transições suaves e uma estética futurista em 3D.
 
