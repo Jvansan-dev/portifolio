@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="icon" type="image/png" href="assets/images/logo.png">
     <link rel="apple-touch-icon" href="assets/images/logo.png">
@@ -156,7 +155,7 @@
                     </div>
                     <div class="contact-details">
                         <h3>Email</h3>
-                        <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ec869a8d829f8d82c288899aac8b818d8580c28f8381">[email&#160;protected]</a></p>
+                        <p>jvansan.dev@gmail.com</p>
                     </div>
                 </div>
 
@@ -289,7 +288,7 @@
         </div>
     </div>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         // Gerar estrelas animadas
         function createStars() {
             const starsContainer = document.getElementById('starsBackground');
@@ -313,7 +312,26 @@
 
                 starsContainer.appendChild(star);
             }
+
+            // Criar estrelas cadentes
+            for (let i = 0; i < 3; i++) {
+                const shootingStar = document.createElement('div');
+                shootingStar.className = 'shooting-star';
+
+                shootingStar.style.left = Math.random() * 100 + '%';
+                shootingStar.style.top = Math.random() * 50 + '%';
+                shootingStar.style.animationDelay = Math.random() * 8 + 's';
+
+                starsContainer.appendChild(shootingStar);
+            }
         }
 
         // Inicializar quando a página carregar
-      
+        document.addEventListener('DOMContentLoaded', createStars);
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
