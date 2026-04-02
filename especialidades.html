@@ -10,6 +10,11 @@
     <link rel="icon" type="image/png" href="assets/images/logo.png" />
     <link rel="apple-touch-icon" href="assets/images/logo.png" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -168,18 +173,6 @@
                 star.style.animationDelay = Math.random() * 3 + 's';
 
                 starsContainer.appendChild(star);
-            }
-
-            // Criar estrelas cadentes
-            for (let i = 0; i < 3; i++) {
-                const shootingStar = document.createElement('div');
-                shootingStar.className = 'shooting-star';
-
-                shootingStar.style.left = Math.random() * 100 + '%';
-                shootingStar.style.top = Math.random() * 50 + '%';
-                shootingStar.style.animationDelay = Math.random() * 8 + 's';
-
-                starsContainer.appendChild(shootingStar);
             }
         }
 
