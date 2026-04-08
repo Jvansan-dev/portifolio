@@ -45,14 +45,14 @@ O site foi construído utilizando tecnologias puras da web (HTML, CSS e JavaScri
 
 ## 📂 Estrutura do Projeto
 
-├── index.html
-├── contato.html
-├── curriculo.html
-├── especialidades.html
-├── projetos.html
-├── style.css
-├── script.js
-└── README.md
+─ index.html
+─ contato.html
+─ curriculo.html
+─ especialidades.html
+─ projetos.html
+─ style.css
+─ script.js
+─ README.md
 
 ---
 
