@@ -44,3 +44,62 @@ O site foi construído utilizando tecnologias puras da web (HTML, CSS e JavaScri
 ---
 
 ## 📂 Estrutura do Projeto
+
+├── index.html
+├── contato.html
+├── curriculo.html
+├── especialidades.html
+├── projetos.html
+├── style.css
+├── script.js
+└── README.md
+
+---
+
+## ⚙️ Funcionalidades
+
+- Navegação entre páginas (não SPA)
+- Formulário de contato
+- Seções organizadas (Sobre, Projetos, Habilidades)
+- Efeitos visuais e interativos
+- Layout adaptado para diferentes telas
+
+---
+
+## 🎨 Personalização
+
+Você pode facilmente adaptar o projeto:
+
+- Alterar cores no `style.css`
+- Editar conteúdos HTML
+- Ajustar comportamentos no `script.js`
+
+---
+
+## 📈 Objetivo
+
+Este projeto faz parte da minha evolução como desenvolvedor, com foco em:
+
+- Desenvolvimento front-end moderno
+- Criação de interfaces profissionais
+- Aplicação prática de conceitos de UI/UX
+
+---
+
+## 📬 Contato
+
+Caso queira entrar em contato ou trocar uma ideia:
+
+- 💼 LinkedIn
+- 📧 Email
+- 🌐 Portfólio online
+
+---
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT.
+
+---
+
+⭐ Se você gostou do projeto, considere dar uma estrela no repositório!
