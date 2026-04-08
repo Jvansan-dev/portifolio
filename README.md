@@ -1,4 +1,11 @@
+![Status](https://img.shields.io/badge/status-online-green)
+![Tech](https://img.shields.io/badge/stack-HTML%20CSS%20JS-blue)
+
 # 🚀 Portfólio | João Victor Vansan
+
+<p align="center">
+  <img src="assets/gifsite.gif" alt="Preview do projeto" width="800">
+</p>
 
 Este é meu portfólio profissional como desenvolvedor front-end, desenvolvido com foco em performance, design moderno e experiência do usuário.
 
